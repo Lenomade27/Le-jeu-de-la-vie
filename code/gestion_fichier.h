@@ -5,9 +5,6 @@ using namespace std ;
 
 
 class gestion_fichier {
-protected:
-
-
 public:
 //string create_fichier(Grille grille) ; //retourn le liens de notre fichier crée
 static vector<vector<int>> get_fichier_data(string lien); 

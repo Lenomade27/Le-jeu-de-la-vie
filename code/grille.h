@@ -6,7 +6,7 @@ using namespace std ;
 
 
 class Grille {
-private:
+public:
     vector<vector<Case>> grille; 
 
 public:

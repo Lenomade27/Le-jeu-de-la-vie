@@ -2,12 +2,13 @@
 using namespace std ;
 
 class Case {
-protected:
-int type_cellule = 0 ;
-int type_cellule_past = 0;
+public:
+int type_cellule;
+int type_cellule_past;
 public:
 Case();
 Case(int type);
+void set_case(int type);
 
 };
 
