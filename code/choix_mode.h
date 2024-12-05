@@ -4,7 +4,7 @@ using namespace std ;
 
 
 class choix_mode {
-public:
+protected:
 int iteration ;
 int temp_entre_iteration ;
 bool mode ;

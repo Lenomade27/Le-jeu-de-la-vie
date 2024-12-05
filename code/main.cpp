@@ -38,13 +38,11 @@ int main(){
         cin >> temp ; 
         jeux = new jeux_de_la_vie(25,temp,modeb,liens);
         jeux->jeux_de_la_vie_regle();
-        cout<<jeux->iteration<<endl;
     }
     else {
         cout<<"erreur mod invalide"<<endl ; 
         return 0 ;
     }
-    cout<<jeux->iteration<<endl;
     
 
 

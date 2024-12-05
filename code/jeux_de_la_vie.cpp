@@ -8,7 +8,7 @@ using namespace std ;
 
 
 void jeux_de_la_vie::jeux_de_la_vie_regle(){
-cout<<"Je m'appelle la vie"<<endl;
+
 }
 
 
