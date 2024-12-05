@@ -1,4 +1,4 @@
-#include "affichage.h"
+/*#include "affichage.h"
 
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -57,6 +57,6 @@ int main() {
 }
 
 
-
+*/
 
 
