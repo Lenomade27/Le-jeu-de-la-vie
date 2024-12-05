@@ -4,6 +4,7 @@
 #include "jeux_de_la_vie.h"
 #include "affichage.h"
 #include <vector>
+using namespace std ; 
 
 
 Grille :: Grille(string lien){
@@ -37,6 +38,15 @@ void Grille :: insertionCellule(int x, int y,Case const & cellule){
 /*Case Grille :: getterCellule(int x, int y){
 
 }*/
-void Grille :: afficherGrille(){
+
+
+void Grille :: afficherGrille(Grille* grille_aff){
+for(int i=0;i<grille_aff->grille.size();i++){
+        for(int j=0;j<grille_aff->grille[i].size();j++){
+            cout << grille_aff->grille[i][j].type_cellule<<" " ; 
+        }
+        cout << endl;
+    }
+
 
 }

@@ -20,7 +20,7 @@ public:
     Case getterCellule(int x, int y);
 
     // Méthode pour afficher la grille (optionnel)
-    void afficherGrille();
+    static void afficherGrille(Grille* grille_aff);
 };
 
 
