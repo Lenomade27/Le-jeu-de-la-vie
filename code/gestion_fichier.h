@@ -5,8 +5,10 @@ using namespace std ;
 
 
 class gestion_fichier {
+protected:
+static int compteur_fichier ; 
 public:
-//string create_fichier(Grille grille) ; //retourn le liens de notre fichier crée
+static void create_fichier(Grille* grille,string lien) ; //creer le fichier pas besoins de return
 static vector<vector<int>> get_fichier_data(string lien); 
 static string create_file();//renvoie le liens du dossier crée 
 
