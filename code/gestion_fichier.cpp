@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <sys/stat.h>
 using namespace std ;
 /*
 class FileManager {
@@ -119,7 +120,20 @@ vector<vector<int>> gestion_fichier :: get_fichier_data(string lien){
     return grille ;
 
 }
+string gestion_fichier :: create_file(){
+    
+    cout<<"Choissez le chemin pour stocker l'historique : "<<endl;
+    string path ;
+    cin>>path ; 
+    if (mkdir(path.c_str(), 0777) == 0) {  // 0777 = Permissions complètes
+        cout << "Répertoire créé avec succès : " << path << endl;
+        return path ;
+    } else {
+        perror("Erreur lors de la création du répertoire");
+        return 0; // Veut retourner quelque chose mais vue que c'est une erreur je return une erreur
+    }
 
+}
 
 
 

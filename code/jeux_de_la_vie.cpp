@@ -3,6 +3,7 @@
 #include "observer.h"
 #include "grille.h"
 #include <iostream>
+#include "gestion_fichier.h"
 using namespace std ;
 #include <vector>
 
@@ -10,19 +11,17 @@ using namespace std ;
 void jeux_de_la_vie::jeux_de_la_vie_regle(){
 if(this->mode){
 cout<<"Mode graphique"<<endl;
-Grille* grille_i = nullptr;
-(void)grille_i;
-grille_i = new Grille(this->lien_fichier);;
-cout<<grille_i->grille[0][0].type_cellule<<endl;
+//Grille* grille_i = nullptr;
+//grille_i = new Grille(this->lien_fichier);;//penser a l'utiliser sinon bug
+//cout<<grille_i->grille[0][1].type_cellule<<endl;
 
 }
 else{
 cout<<"Mode console"<<endl;
-Grille* grille_i = nullptr;
-(void)grille_i;
-grille_i = new Grille(this->lien_fichier);
-cout<<grille_i->grille[0][0].type_cellule<<endl;
-
+//Grille* grille_i = nullptr;
+//grille_i = new Grille(this->lien_fichier);//penser a l'utiliser sinon bug
+//cout<<grille_i->grille[0][2].type_cellule<<endl;
+gestion_fichier::create_file();
 
 
 
