@@ -2,10 +2,12 @@
 #include <string>
 #include "case.h" 
 using namespace std ;
+#pragma once
+
 
 class Grille {
 private:
-    vector<vector<case>> grille; 
+    vector<vector<Case>> grille; 
 
 public:
     // Constructeur par défaut
@@ -15,10 +17,10 @@ public:
     Grille(const string& fichier);
 
     // Méthode pour insérer une cellule dans la grille
-    void insertionCellule(int x, int y, const case& cellule);
+    void insertionCellule(int x, int y,Case const & cellule);
 
     // Méthode pour obtenir une cellule de la grille
-    case getterCellule(int x, int y) const;
+    Case getterCellule(int x, int y) const;
 
     // Méthode pour afficher la grille (optionnel)
     void afficherGrille() const;

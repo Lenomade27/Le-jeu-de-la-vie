@@ -1,13 +1,14 @@
 #include <vector>
 #include <string>
-#include "case.h" 
 using namespace std ;
+#include "grille.h"
 
 
 
 class observer {
         public : 
-        void rules_observer(Grille);
-    }
+        void rules_observer(Grille grille);
+
+};
 
 

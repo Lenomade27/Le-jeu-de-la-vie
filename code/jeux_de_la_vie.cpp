@@ -8,7 +8,13 @@ using namespace std ;
 
 
 void jeux_de_la_vie::jeux_de_la_vie_regle(){
+if(this->mode){
+cout<<"Mode graphique"<<endl;
+}
+else{
+cout<<"Mode console"<<endl;
 
+}
 }
 
 
