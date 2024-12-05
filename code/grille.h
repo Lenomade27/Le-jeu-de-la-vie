@@ -10,20 +10,17 @@ private:
     vector<vector<Case>> grille; 
 
 public:
-    // Constructeur par défaut
-    Grille();
-
-    // Constructeur avec un fichier en paramètre pour initialiser la grille
-    Grille(const string& fichier);
+    // Constructeur avec un lien de fichier en paramètre pour initialiser la grille
+    Grille(string lien);
 
     // Méthode pour insérer une cellule dans la grille
     void insertionCellule(int x, int y,Case const & cellule);
 
     // Méthode pour obtenir une cellule de la grille
-    Case getterCellule(int x, int y) const;
+    Case getterCellule(int x, int y);
 
     // Méthode pour afficher la grille (optionnel)
-    void afficherGrille() const;
+    void afficherGrille();
 };
 
 

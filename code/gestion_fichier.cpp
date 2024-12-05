@@ -1,9 +1,11 @@
-/*#include "gestion_fichier.h"
+#include "gestion_fichier.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
-
+#include <sstream>
+using namespace std ;
+/*
 class FileManager {
 private:
     std::string filename;
@@ -95,6 +97,31 @@ int main() {
     }
 
     return 0;
+}*/
+
+vector<vector<int>> gestion_fichier :: get_fichier_data(string lien){
+    ifstream fichier(lien);
+    string ligne;
+    vector<vector<int>> grille ; 
+    while (getline(fichier, ligne)) { 
+        istringstream stream(ligne);
+        vector<int> ligneVecteur;
+
+        int valeur;
+        while (stream >> valeur) { 
+            ligneVecteur.push_back(valeur);
+        }
+        
+        grille.push_back(ligneVecteur);
+    }
+
+    fichier.close();
+    return grille ;
+
 }
 
-*/
+
+
+
+
+

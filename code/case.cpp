@@ -1,7 +1,5 @@
 #include "case.h"
 
-
-
 Case :: Case(int type){
 
 type_cellule = type ;

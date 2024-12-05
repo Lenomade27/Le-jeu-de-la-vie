@@ -2,15 +2,15 @@
 #include <fstream>
 using namespace std ;
 #include "grille.h"
-#pragma once
+
 
 class gestion_fichier {
 protected:
-string chemin_fichier ; 
+
 
 public:
-void creat_fichier(Grille grille) ;
-void get_fichier() ; 
+//string create_fichier(Grille grille) ; //retourn le liens de notre fichier crée
+static vector<vector<int>> get_fichier_data(string lien); 
 
 
 };
