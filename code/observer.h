@@ -1,14 +1,13 @@
-#include <vector>
-#include <string>
-using namespace std ;
 #include "grille.h"
+#include "jeux_de_la_vie.h"
+#include "affichage.h"
+#include <vector>
 
 
 
 class observer {
         public : 
-        void rules_observer(Grille grille);
-
+        static void fouille_grille(Grille* grille_obs);
 };
 
 

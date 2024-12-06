@@ -32,21 +32,61 @@ for (int i=0;i<grille_int.size();i++){
 }
 
 }
-void Grille :: insertionCellule(int x, int y,Case const & cellule){
 
-}
-/*Case Grille :: getterCellule(int x, int y){
-
-}*/
 
 
 void Grille :: afficherGrille(Grille* grille_aff){
 for(int i=0;i<grille_aff->grille.size();i++){
         for(int j=0;j<grille_aff->grille[i].size();j++){
-            cout << grille_aff->grille[i][j].type_cellule<<" " ; 
+            cout << grille_aff->grille[i][j].ping<<" " ;  // a changer test actuel
         }
         cout << endl;
     }
 
 
 }
+
+bool Grille :: test_grille(Grille* grille_test){
+for(int i=0;i<grille_test->grille.size();i++){
+        for(int j=0;j<grille_test->grille[i].size();j++){
+            if (grille_test->grille[i][j].type_cellule != grille_test->grille[i][j].type_cellule_past) {
+                return true ; 
+            }
+        }
+        
+    }
+return false ;
+}
+
+void Grille :: set_voisin(Grille* grille_vois,int i ,int j,bool mode){//true marque les cases que l'on devra repasser et false va compter les case vivante autour
+int taille_ligne =  grille_vois->grille.size();
+int taille_colone =  grille_vois->grille[i].size();
+if(mode){//set marqueur
+grille_vois->grille[i][j].ping = true;
+if(i<taille_ligne && j>0)grille_vois->grille[i+1][j-1].ping = true;
+if(i<taille_ligne && j < taille_colone )grille_vois->grille[i+1][j+1].ping = true;
+if(i>0 && j>0)grille_vois->grille[i-1][j-1].ping = true;
+if(i>0 && j < taille_colone)grille_vois->grille[i-1][j+1].ping = true;
+if(i>0)grille_vois->grille[i-1][j].ping = true;
+if(j>0)grille_vois->grille[i][j-1].ping = true;
+if(i<taille_ligne)grille_vois->grille[i+1][j].ping = true;
+if(j<taille_colone)grille_vois->grille[i][j+1].ping = true;
+}
+else {//set compteur
+int compt = 0;
+if (i + 1 < taille_ligne && j - 1 >= 0 && grille_vois->grille[i + 1][j - 1].type_cellule == 1) compt++;
+if (i + 1 < taille_ligne && j + 1 < taille_colone && grille_vois->grille[i + 1][j + 1].type_cellule == 1) compt++;
+if (i - 1 >= 0 && j - 1 >= 0 && grille_vois->grille[i - 1][j - 1].type_cellule == 1) compt++;
+if (i - 1 >= 0 && j + 1 < taille_colone && grille_vois->grille[i - 1][j + 1].type_cellule == 1) compt++;
+if (i - 1 >= 0 && grille_vois->grille[i - 1][j].type_cellule == 1) compt++;
+if (j - 1 >= 0 && grille_vois->grille[i][j - 1].type_cellule == 1) compt++;
+if (i + 1 < taille_ligne && grille_vois->grille[i + 1][j].type_cellule == 1) compt++;
+if (j + 1 < taille_colone && grille_vois->grille[i][j + 1].type_cellule == 1) compt++;
+
+grille_vois->grille[i][j].compteur = compt ; 
+}
+
+
+}
+
+

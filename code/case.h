@@ -4,7 +4,9 @@ using namespace std ;
 class Case {
 public:
 int type_cellule;
-int type_cellule_past;
+int type_cellule_past = 0;
+bool ping = false;
+int compteur = 0;
 public:
 Case();
 Case(int type);

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "choix_mode.h"
+#pragma once
+
 
 class jeux_de_la_vie :public choix_mode {
 public:

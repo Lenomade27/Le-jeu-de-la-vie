@@ -2,7 +2,7 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
-
+#pragma once 
 class affichage {
 
 public : 
