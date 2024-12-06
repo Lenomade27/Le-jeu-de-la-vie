@@ -1,1 +1,23 @@
+Attendus du projet
 
+  Livrable 1 : Documentation utilisateur
+  Document pour décrire les fonctionnalités du code, ses extensions, son mode d’execution et comment intéragir avec, conformément au cahier des charges.
+  
+  Livrable 2 : maquette / modélisation
+  ⦁	Fournir les 4 Diagrammes UMLs, les expliquer.
+  ⦁	Implémenter les diagrammes selon le pattern MVC.
+  ⦁	Fournir des explications sur notre environnement de travail - Git.
+  ⦁	Appliquer les bonnes pratiques de la POO dans notre environnement de travail.
+  ⦁	Tests unitaires à ne pas prendre en compte, s’approprier la notion quand même.
+  
+  Attendus au niveau technique du code :
+  ⦁	Execution du programme complet sans message d’erreurs.
+  ⦁	Bonne organisation du code - découpage header/source.
+  ⦁	Bonne encapsulation, bonne qualité d’implémentation des classes, inclusion du polymorphisme, d’héritage.
+  ⦁	Bonne gestion mémoire.
+  
+  Soutenance : 
+  ⦁	Décrire les fonctionnalités du programme.
+  ⦁	Présenter le code.
+  ⦁	Présenter les extensions choisies & implémenter.
+  ⦁	Inclure le lien de notre repo github dans le README & déposer notre répo au format .zip pour examen des tuteurs.
