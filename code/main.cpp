@@ -36,7 +36,7 @@ int main(){
         int temp ;
         cout<<"Choissez le temp entre chaque itération(milliseconde)"<<endl;
         cin >> temp ; 
-        jeux = new jeux_de_la_vie(25,temp,modeb,liens);
+        jeux = new jeux_de_la_vie(1000,temp,modeb,liens);
         jeux->jeux_de_la_vie_regle();
     }
     else {

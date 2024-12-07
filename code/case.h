@@ -2,15 +2,15 @@
 using namespace std ;
 
 class Case {
-public:
-int type_cellule;
-int type_cellule_past = 0;
-bool ping = false;
-int compteur = 0;
-public:
-Case();
-Case(int type);
-void set_case(int type);
+    public:
+    int type_cellule;
+    int type_cellule_past = 0;
+    bool ping = false;
+    int compteur = 0;
+    public:
+    Case();
+    Case(int type);
+    void set_case(int type);
 
 };
 

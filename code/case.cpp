@@ -1,11 +1,11 @@
 #include "case.h"
 
 Case :: Case(int type){//1 Vivant 
-type_cellule = type ;
+    type_cellule = type ;
 
 }
 Case :: Case(){//0 Mort
-type_cellule = 0 ;
+    type_cellule = 0 ;
 }
 
 void Case::set_case(int type){
