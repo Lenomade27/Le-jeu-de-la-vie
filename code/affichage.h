@@ -5,12 +5,12 @@
 #pragma once 
 #include "grille.h"
 
-class affichage {
+class affichage { //Permet de construire et de réutiliser notre affichage plus simplement 
     public : 
-    int cellSize;
+    int cellSize; // Mettre a jour lors de grand test
     int gridWidth  ;
     int gridHeight ;
-    sf::RenderWindow* window;
+    sf::RenderWindow* window; // Evite les doublons
 
     public : 
     affichage(Grille* grille_aff);
