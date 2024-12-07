@@ -38,7 +38,7 @@ for (int i=0;i<grille_int.size();i++){
 void Grille :: afficherGrille(Grille* grille_aff){
 for(int i=0;i<grille_aff->grille.size();i++){
         for(int j=0;j<grille_aff->grille[i].size();j++){
-            cout << grille_aff->grille[i][j].type_cellule_past<<" " ;  // a changer test actuel
+            cout << grille_aff->grille[i][j].type_cellule<<" " ;  // a changer test actuel
         }
         cout << endl;
     }
