@@ -24,11 +24,24 @@ grille_i = new Grille(this->lien_fichier);//penser a l'utiliser sinon bug
 //string lien_doss = gestion_fichier::create_file();
 //gestion_fichier::create_fichier(grille_i,lien_doss) ;
 //Grille :: afficherGrille(grille_i);
-observer :: fouille_grille(grille_i);
+string lien_doss = gestion_fichier::create_file();
 Grille :: afficherGrille(grille_i);
-
-
-
+cout<<" "<<endl;
+bool condition = true ;
+while(this->iteration>0 && condition != 0){
+    this->iteration --;
+    observer :: fouille_grille(grille_i);
+    Grille :: refresh_grille(grille_i);
+    condition = Grille :: test_grille(grille_i);
+    //cout<<condition<<endl;
+    //Grille :: afficherGrille(grille_i);
+    //cout<<this->iteration<<endl;
+    if (condition != 0){
+        gestion_fichier::create_fichier(grille_i,lien_doss) ;
+    }
+    
+    
+}
 }
 }
 

@@ -38,7 +38,7 @@ for (int i=0;i<grille_int.size();i++){
 void Grille :: afficherGrille(Grille* grille_aff){
 for(int i=0;i<grille_aff->grille.size();i++){
         for(int j=0;j<grille_aff->grille[i].size();j++){
-            cout << grille_aff->grille[i][j].ping<<" " ;  // a changer test actuel
+            cout << grille_aff->grille[i][j].type_cellule_past<<" " ;  // a changer test actuel
         }
         cout << endl;
     }
@@ -63,14 +63,14 @@ int taille_ligne =  grille_vois->grille.size();
 int taille_colone =  grille_vois->grille[i].size();
 if(mode){//set marqueur
 grille_vois->grille[i][j].ping = true;
-if(i<taille_ligne && j>0)grille_vois->grille[i+1][j-1].ping = true;
-if(i<taille_ligne && j < taille_colone )grille_vois->grille[i+1][j+1].ping = true;
-if(i>0 && j>0)grille_vois->grille[i-1][j-1].ping = true;
-if(i>0 && j < taille_colone)grille_vois->grille[i-1][j+1].ping = true;
-if(i>0)grille_vois->grille[i-1][j].ping = true;
-if(j>0)grille_vois->grille[i][j-1].ping = true;
-if(i<taille_ligne)grille_vois->grille[i+1][j].ping = true;
-if(j<taille_colone)grille_vois->grille[i][j+1].ping = true;
+if(i+1<taille_ligne && j-1>0)grille_vois->grille[i+1][j-1].ping = true;
+if(i+1<taille_ligne && j+1 < taille_colone )grille_vois->grille[i+1][j+1].ping = true;
+if(i-1>0 && j>0)grille_vois->grille[i-1][j-1].ping = true;
+if(i-1>0 && j < taille_colone)grille_vois->grille[i-1][j+1].ping = true;
+if(i-1>0)grille_vois->grille[i-1][j].ping = true;
+if(j-1>0)grille_vois->grille[i][j-1].ping = true;
+if(i+1<taille_ligne)grille_vois->grille[i+1][j].ping = true;
+if(j+1<taille_colone)grille_vois->grille[i][j+1].ping = true;
 }
 else {//set compteur
 int compt = 0;
@@ -85,8 +85,34 @@ if (j + 1 < taille_colone && grille_vois->grille[i][j + 1].type_cellule == 1) co
 
 grille_vois->grille[i][j].compteur = compt ; 
 }
+}
+
+void Grille :: refresh_grille(Grille* grille_ref){
+for(int i=0;i<grille_ref->grille.size();i++){
+        for(int j=0;j<grille_ref->grille[i].size();j++){
+            if(grille_ref->grille[i][j].ping == true){
+                grille_ref->grille[i][j].ping = false  ;
+                if(grille_ref->grille[i][j].compteur == 3 && grille_ref->grille[i][j].type_cellule == 0){
+                    grille_ref->grille[i][j].set_case(1);
+                    grille_ref->grille[i][j].compteur = 0 ;
+                }
+                else if (grille_ref->grille[i][j].compteur == 3 && grille_ref->grille[i][j].type_cellule == 1)
+                {
+                    grille_ref->grille[i][j].set_case(1);
+                    grille_ref->grille[i][j].compteur = 0 ;
+                }
+                else if (grille_ref->grille[i][j].compteur == 2 && grille_ref->grille[i][j].type_cellule == 1)
+                {
+                    grille_ref->grille[i][j].set_case(1);
+                    grille_ref->grille[i][j].compteur = 0 ;
+                }
+                else {
+                    grille_ref->grille[i][j].set_case(0);
+                    grille_ref->grille[i][j].compteur = 0 ;
+                }
+            }
+        }
+    }
 
 
 }
-
-

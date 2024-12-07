@@ -18,10 +18,12 @@ public:
     void set_sum_life(int x,int y);
     // Méthode pour obtenir une cellule de la grille
     //Case getterCellule(int x, int y);
-    bool test_grille(Grille* grille_test);
+    static bool test_grille(Grille* grille_test);
     static void set_voisin(Grille* grille_vois,int i ,int j,bool mode);
     // Méthode pour afficher la grille (optionnel)
     static void afficherGrille(Grille* grille_aff);
+
+    static void refresh_grille(Grille* grille_aff);
 };
 
 
