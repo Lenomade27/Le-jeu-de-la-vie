@@ -25,8 +25,6 @@ Grille :: Grille(string lien){
                 Case b(1) ; 
                 grille[i][j] = b ;
             }
-            else if (grille_int[i][j]==2) {}//cellule vivante masi statique a voir 
-            else if (grille_int[i][j]==3) {}//cellule morte mais statique a voir
         }
     }
 
