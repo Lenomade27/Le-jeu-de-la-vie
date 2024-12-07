@@ -2,8 +2,9 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
-#include "grille.h"
 #pragma once 
+#include "grille.h"
+
 class affichage {
     public : 
     int cellSize;

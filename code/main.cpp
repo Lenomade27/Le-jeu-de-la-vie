@@ -2,7 +2,6 @@
 #include "choix_mode.h"
 #include "observer.h"
 #include "grille.h"
-#include <iostream>
 #include <fstream>
 using namespace std ;
 

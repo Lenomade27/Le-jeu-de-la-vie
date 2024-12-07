@@ -1,12 +1,4 @@
 #include "gestion_fichier.h"
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <sstream>
-#include <sys/stat.h>
-using namespace std ;
-
 
 
 int gestion_fichier::compteur_fichier  = 0; 

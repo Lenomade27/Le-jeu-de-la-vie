@@ -1,5 +1,9 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <sys/stat.h>
 using namespace std ;
 #include "grille.h"
 

@@ -3,8 +3,7 @@
 #include "gestion_fichier.h"
 #include "jeux_de_la_vie.h"
 #include "affichage.h"
-#include <vector>
-using namespace std ; 
+
 
 
 Grille :: Grille(string lien){

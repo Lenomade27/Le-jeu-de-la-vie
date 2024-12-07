@@ -1,7 +1,7 @@
 #include "grille.h"
 #include "jeux_de_la_vie.h"
 #include "affichage.h"
-#include <vector>
+
 
 
 

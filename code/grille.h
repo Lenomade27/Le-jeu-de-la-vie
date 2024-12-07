@@ -1,9 +1,8 @@
 #include <vector>
-#include <string>
+
 #include "case.h" 
 using namespace std ;
 #pragma once
-
 
 class Grille {
 public:

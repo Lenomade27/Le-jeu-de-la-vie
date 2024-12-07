@@ -1,5 +1,4 @@
 #include "choix_mode.h"
-#include <iostream>
 
 
 

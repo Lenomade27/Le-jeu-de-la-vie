@@ -2,13 +2,9 @@
 #include "choix_mode.h"
 #include "observer.h"
 #include "grille.h"
-#include <iostream>
 #include "gestion_fichier.h"
 #include "affichage.h"
-using namespace std ;
-#include <vector>
-#include <chrono>
-#include <thread>
+
 
 void jeux_de_la_vie::jeux_de_la_vie_regle(){
     if(this->mode){
@@ -51,7 +47,6 @@ void jeux_de_la_vie::jeux_de_la_vie_regle(){
         Grille* grille_i = nullptr;
         grille_i = new Grille(this->lien_fichier);
         string lien_doss = gestion_fichier::create_file();
-        Grille :: afficherGrille(grille_i);
         cout<<" "<<endl;
         bool condition = true ;
         this_thread::sleep_for(chrono::milliseconds(this->temp_entre_iteration));

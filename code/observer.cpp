@@ -1,7 +1,6 @@
 #include "observer.h"
 #include "grille.h"
-#include <vector>
-#include <string>
+
 using namespace std ;
 
 

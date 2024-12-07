@@ -1,9 +1,6 @@
 #include "affichage.h"
 #include "grille.h"
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <ctime>
-#include <cstdlib>
+
 using namespace std ;
 
 
