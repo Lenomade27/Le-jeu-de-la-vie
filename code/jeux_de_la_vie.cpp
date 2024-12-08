@@ -59,7 +59,7 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
             Grille :: refresh_grille(grille_i);
             condition = Grille :: test_grille(grille_i);
             if (condition != 0){
-                gestion_fichier::create_fichier(grille_i,lien_doss) ; // Création a chaque itération d'un fichier de notre grille 
+                gestion_fichier::create_fichier(grille_i,lien_doss,this->lien_fichier) ; // Création a chaque itération d'un fichier de notre grille 
             }
         
         }

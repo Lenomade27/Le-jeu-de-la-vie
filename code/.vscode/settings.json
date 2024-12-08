@@ -99,6 +99,7 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "iostream": "cpp",
-    "thread": "cpp"
+    "thread": "cpp",
+    "format": "cpp"
   }
 }
