@@ -2,7 +2,7 @@
 
 
 class gestion_fichier {
-    protected:
+    private:
     static int compteur_fichier ; // Parametre qui vas nous permetre de calculer le nombre de fichier crées et de les marqués 
     public:
     static void create_fichier(Grille* grille,string lien,string lien_nom) ; //Méthode pour créer un fichier avec le nom de l'origine_out

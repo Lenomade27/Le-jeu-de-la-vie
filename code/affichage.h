@@ -6,10 +6,11 @@
 #include "grille.h"
 
 class affichage { //Permet de construire et de réutiliser notre affichage plus simplement 
-    public : 
+    private : 
     int cellSize; // Mettre a jour lors de grand test
     int gridWidth  ;
     int gridHeight ;
+    public:
     sf::RenderWindow* window; // Evite les doublons
 
     public : 

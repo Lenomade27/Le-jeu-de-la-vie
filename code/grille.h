@@ -9,7 +9,7 @@
 #pragma once
 
 class Grille {
-public: // a revoir
+public: 
     vector<vector<Case>> grille; 
 
 public:
