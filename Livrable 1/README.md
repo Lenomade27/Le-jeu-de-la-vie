@@ -1,4 +1,4 @@
-# README Livrable 1
+# Livrable 1
 ## Fonctionnalités implémentées
 
 choix_mode :
