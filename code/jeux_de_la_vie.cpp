@@ -53,12 +53,13 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
         string lien_doss = gestion_fichier::create_file();// Création du dossier pour stocker les historiques des grilles
         cout<<" "<<endl;
         bool condition = true ;
+        int max_itération = this->iteration ;
         while(this->iteration>0 && condition != 0){//Cette fois si seulment deux conditions 
             this->iteration --;
             observer :: fouille_grille(grille_i);
             Grille :: refresh_grille(grille_i);
             condition = Grille :: test_grille(grille_i);
-            if (condition != 0){
+            if (condition != 0 && this->iteration > max_itération/2){
                 gestion_fichier::create_fichier(grille_i,lien_doss,this->lien_fichier) ; // Création a chaque itération d'un fichier de notre grille 
             }
         
