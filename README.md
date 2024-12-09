@@ -1,27 +1,130 @@
-# Le-jeu-de-la-vie
- ## Principe
-   Le jeu de la vie désigne un automate cellulaire proposé par le mathématicien John Conway. Il décrit l’évolution d’une population de cellules sur un intervalle de temps discret. Les cellules placées dans une   
-   grille rectangulaire deux dimensionnelle sont caractérisées par deux états ; elles sont soit vivantes, soit mortes. A l’exclusion des bordures, le voisinage d’une cellule est formé par 8 autres cellules 
-   directement adjacentes. 
-   
-   Pour passer de l’itération  à l’itération t les règles suivantes : t +1 , l’état des cellules dans la grille est actualisé selon
-   - Une cellule morte possédant exactement trois voisines vivantes devient vivante.
-   - Une cellule vivante possédant deux ou trois voisines vivantes reste vivante, sinon elle meurt.
 
- ## Spécifications fonctionnelles
-   1. L’utilisateur lance le programme et fournit le chemin du fichier contenant l’état initial des cellules en paramètre.
-   2. Le programme consomme le fichier avec le format précédemment décrit et génère l’ensemble des  objets du programme (grille, cellules).
-   3. A chaque itération les cellules changent d’état selon les règles énoncées plus haut.
-   4. L’exécution se termine lorsque l’automate n’évolue plus ou après un nombre d’itération fixé arbitrairement.
-   5. Deux modes de fonctionnement seront implémentés :
-   - Le premier, en mode console, fournira les états des  premières itérations de votre jeu de la vie. A chaque itération le programme écrit l’état des cellules dans un fichier selon le format décrit   
-   précedemment. Ces résultats sont stockés dans des dossiers nommés <nom_du_fichier_dentree>_out et utilisés pour correction.
-   - Le second, en mode graphique, affiche la grille et l’état des cellules sur une interface graphique. Pour aboutir, vous disposez d’un exemple de code capable d’afficher une fenêtre graphique et une grille de
-   cellules. Celui-ci devra être adapté en une version orientée objet. La simulation démarre au lancement du programme. La durée entre deux itérations est contrôlable.
+# **Le Jeu de la Vie - Implémentation en C++ avec une interface graphique**
 
+## **Description du Projet**
 
- ## Extensions
-   1. Gestion d’une grille torique. Les cellules placées aux extrémités de la grille sont adjacentes ; en d’autres termes les cellules en colonne 0 sont voisines des cellules en colonne N-1 avec N nombre de 
-   colonnes. Le principe est similaire en ligne.
-   2. Introduction de cellules obstacle. L’état des cellules obstacles n’évolue pas au cours de l’exécution. Ces dernières possèdent un état vivant ou mort. Modifiez votre code, sans altérer le fonctionnement de 
-   base.
+Le **Jeu de la Vie**, conçu par le mathématicien John Conway, est un automate cellulaire simulant l'évolution d'une population de cellules selon des règles précises. Ce projet met en œuvre une version en **C++**, exploitant les principes de la **programmation orientée objet (POO)**, avec une interface graphique basée sur la bibliothèque **SFML**.
+
+---
+
+## **Caractéristiques Principales**
+
+- **Simulation basée sur les règles classiques :**
+  - Une cellule morte possédant exactement trois voisines vivantes devient vivante.
+  - Une cellule vivante avec deux ou trois voisines vivantes reste vivante; sinon, elle meurt.
+- **Lecture des configurations initiales depuis un fichier texte.**
+- **Deux modes de simulation :**
+  1. **Mode console :** Exporte les résultats de simulation sous forme de fichiers.
+  2. **Mode graphique :** Affiche une simulation interactive en temps réel.
+- **Extensions avancées :**
+  - Grille torique (les bords opposés de la grille sont connectés).
+  - Cellules obstacles (fixes, vivantes ou mortes).
+
+---
+
+## **Dépendances**
+- **Langage :** C++ standard (C++11 ou supérieur)
+- **Bibliothèque graphique :** [SFML](https://www.sfml-dev.org/)
+- **STL C++ :** Utilisation des structures et algorithmes standards.
+
+---
+
+## **Installation et Exécution**
+
+### **1. Cloner le dépôt** 🛠️
+```bash
+git clone https://github.com/Lenomade27/Le-jeu-de-la-vie.git
+cd Le-jeu-de-la-vie
+```
+
+### **2. Installer les dépendances nécessaires** 📦
+
+#### **Installation de SFML**
+- **Sous Ubuntu :**
+  ```bash
+  sudo apt-get update
+  sudo apt-get install libsfml-dev
+
+#### **Installation de Clang et Make**
+- **Sous Ubuntu :**
+  ```bash
+  sudo apt-get install clang make
+  ```
+
+### **3. Compiler le projet avec Make** ⚙️
+
+Une fois les dépendances installées, compilez le projet à l'aide du **Makefile** :
+1. Nettoyez les anciens fichiers compilés (si nécessaire) :
+   ```bash
+   make clean
+   ```
+2. Compilez le projet :
+   ```bash
+   make
+   ```
+3. Exécutez le programme :
+   - **Mode console :**
+     ```bash
+     ./main <chemin_fichier_configuration> console <chemin_fichier_ecriture>
+     ```
+   - **Mode graphique :**
+     ```bash
+     ./main <chemin_fichier_configuration> graphique <durée_itération>
+     ```
+
+---
+
+## **Structure du Dépôt**
+
+### **Répertoire racine**
+- `README.md` : Documentation du projet.
+- `LICENSE` : Licence du projet.
+- `CMakeLists.txt` : Fichier de configuration pour CMake.
+
+### **Arborescence suggérée**
+```
+Le-jeu-de-la-vie/
+├── docs/                  # Documentation (diagrammes UML, guides, etc.)
+├── src/                   # Code source
+│   ├── main.cpp           # Point d'entrée du programme
+│   ├── GameOfLife.cpp     # Logique principale du jeu
+│   ├── Grid.cpp           # Gestion de la grille et des cellules
+│   └── ...                # Autres fichiers source
+├── include/               # Fichiers d'en-tête
+│   ├── GameOfLife.h       # Déclaration des classes
+│   └── ...
+├── assets/                # Ressources (icônes, fichiers de configuration exemples)
+│   ├── examples/          # Fichiers d'état initial de la grille
+│   └── ...
+├── tests/                 # Tests unitaires et d'intégration
+├── build/                 # Répertoire de compilation (généré automatiquement)
+└── .github/               # Fichiers de configuration GitHub
+    ├── workflows/         # Actions CI/CD
+    └── ...
+```
+
+---
+
+## **Diagrammes UML**
+
+Les diagrammes suivants sont inclus dans le répertoire `docs/` :
+- **Diagramme de cas d'utilisation** : Explique les interactions utilisateur.
+- **Diagramme de classes** : Représente les relations entre les objets du système.
+- **Diagramme d'activité** : Décrit le flux d'exécution du programme.
+- **Diagramme de séquence** : Illustre les échanges entre objets lors de la simulation.
+
+---
+
+## **Licence**
+
+Ce projet est sous licence [MIT](./LICENSE).
+
+---
+
+## **Contact**
+
+Pour toute question ou suggestion, veuillez ouvrir une **issue** sur ce dépôt.
+
+---
+
+😊 **Merci de votre intérêt pour ce projet ! Amusez-vous bien avec le Jeu de la Vie !** 🎉
