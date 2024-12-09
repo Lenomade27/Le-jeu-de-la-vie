@@ -96,7 +96,7 @@ Le-jeu-de-la-vie/
 ├── assets/                # Ressources
 │   ├── examples/          # Fichiers d'état initial de la grille
 │   └── ...
-├── tests/                 # Tests unitaires & mode console
+├── tests/                 # Tests unitaires / mode console
 
 ```
 ---
