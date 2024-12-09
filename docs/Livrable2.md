@@ -1,5 +1,5 @@
 
-# Livrable 2 – Groupe 5
+# Livrable 2 – Groupe 5 (version avec illustration en dépot Moodle)
 
 Dans le cadre de notre projet, nous avons utilisé des outils de modélisation, de gestion de versions et les principes de la programmation orientée objet (POO) pour concevoir et implémenter une solution fiable et robuste. Ce livrable détaille les étapes essentielles de la maquette et de la modélisation, tout en répondant aux critères fixés par le cahier des charges.
 
