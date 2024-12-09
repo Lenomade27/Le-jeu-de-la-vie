@@ -1,7 +1,7 @@
 #include "grille.h"
 
 class gestion_fichier {
-    protected:
+    private:
         static int compteur_fichier ; // paramètre qui permet de calculer le nombre de fichiers créés et de les marquer
     public:
         static void create_fichier(Grille* grille,string lien,string lien_nom) ; //méthode pour créer un fichier
