@@ -40,7 +40,6 @@ string gestion_fichier::create_file() {
 
 void gestion_fichier :: create_fichier(Grille* grille_pointeur,string lien,string lien_nom) { // Méthode permettant de crée un fichier
     gestion_fichier::compteur_fichier += 1; // Incrémentation du compteur de fichiers
-    ofstream fichier(lien + "/" + "<nom_du_fichier_dentree>_out" + to_string(compteur_fichier) + ".txt"); // Création du fichier avec un nom unique
     filesystem::path path(lien_nom);
     string nom = path.stem().string();
     ofstream fichier(lien +"/" +nom+"_out"+to_string(compteur_fichier)+".txt");// A modiifer 
