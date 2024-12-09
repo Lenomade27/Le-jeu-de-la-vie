@@ -14,7 +14,6 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
         affichage* affichage_i = nullptr; // même chose pour l'affichage
         affichage_i = new affichage(grille_i);
 
-        this_thread::sleep_for(chrono::milliseconds(this->temp_entre_iteration)); // comme indiqué dans le projet, on fait patienter l'utilisateur pour qu'il puisse voir la grille de départ du fichier
         while(affichage_i->window->isOpen() && this->iteration > 0 && condition != 0){
             /*
             dans cette boucle, on vérifie trois choses : d'une part, si la fenêtre est toujours ouverte, si des itérations restent à effectuer et si le système ne se répète pas grâce à la condition
@@ -27,6 +26,7 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
             if (condition != 0){ // cette condition permet d'éviter les doublons lorsque la grille atteint un état stable
                 affichage_i->update_affichage(grille_i); // affiche la grille après chaque mise à jour, en affichant initialement la grille sans gêner la suite des boucles
             }
+            this_thread::sleep_for(chrono::milliseconds(this->temp_entre_iteration));// fait une pause entre chaque itération pour permettre à l'utilisateur de voir les changements
             this->iteration--; // à chaque boucle, le nombre d'itérations diminue pour éviter les boucles infinies
 
             observer::fouille_grille(grille_i); // méthode permettant de marquer et compter les cases autour des cellules vivantes
@@ -34,7 +34,7 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
 
             condition = Grille::test_grille(grille_i); // vérifie à chaque boucle si la grille a changé par rapport à la précédente
 
-            this_thread::sleep_for(chrono::milliseconds(this->temp_entre_iteration)); // fait une pause entre chaque itération pour permettre à l'utilisateur de voir les changements
+             
         }
         
     }
