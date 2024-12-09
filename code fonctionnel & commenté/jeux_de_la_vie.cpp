@@ -56,7 +56,7 @@ void jeux_de_la_vie::jeux_de_la_vie_jeux(){
             Grille::refresh_grille(grille_i);
             condition = Grille::test_grille(grille_i);
             if (condition != 0 && this->iteration > max_itération / 2){
-                gestion_fichier::create_fichier(grille_i, lien_doss); // création à chaque itération d'un fichier pour stocker l'état de la grille
+                gestion_fichier::create_fichier(grille_i, lien_doss, this->lien_fichier); // création à chaque itération d'un fichier pour stocker l'état de la grille
             }
         }
     }
