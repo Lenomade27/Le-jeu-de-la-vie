@@ -35,9 +35,12 @@ string gestion_fichier::create_file() {
     }
 }
 
-void gestion_fichier::create_fichier(Grille* grille_pointeur, string lien) { // Méthode permettant de créer un fichier
+void gestion_fichier :: create_fichier(Grille* grille_pointeur,string lien,string lien_nom) { // Méthode permettant de crée un fichier
     gestion_fichier::compteur_fichier += 1; // Incrémentation du compteur de fichiers
     ofstream fichier(lien + "/" + "<nom_du_fichier_dentree>_out" + to_string(compteur_fichier) + ".txt"); // Création du fichier avec un nom unique
+    filesystem::path path(lien_nom);
+    string nom = path.stem().string();
+    ofstream fichier(lien +"/" +nom+"_out"+to_string(compteur_fichier)+".txt");// A modiifer 
     if (fichier.is_open()) { // Vérifie si le fichier a été ouvert correctement
         for (int i = 0; i < grille_pointeur->grille.size(); i++) { // Écriture ligne par ligne dans le fichier
             string ligne = ""; // Initialise une chaîne vide pour chaque ligne
@@ -48,8 +51,7 @@ void gestion_fichier::create_fichier(Grille* grille_pointeur, string lien) { // 
         }
         
         fichier.close();
-        cout << "Fichier créé avec succès : " << lien + "/" + "<nom_du_fichier_dentree>_out" + to_string(compteur_fichier) + ".txt" << endl; // Message de confirmation
+       cout << "Fichier créé avec succès : " << lien + "/" +nom+"_out"+to_string(compteur_fichier)+".txt" << endl;// Message de confirmation
     } else {
-        cout << "Erreur lors de la création du fichier : " << lien + "/" + "<nom_du_fichier_dentree>_out" + to_string(compteur_fichier) + ".txt" << endl; // Message d'erreur
-    }
+         cout << "Erreur lors de la création du fichier : " << lien + "/" +nom+"_out"+to_string(compteur_fichier)+".txt" << endl; // Message d'erreur
 }
