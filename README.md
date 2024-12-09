@@ -93,7 +93,6 @@ Le-jeu-de-la-vie/
 ├── include/               # Fichiers d'en-tête
 │   ├── jeux_de_la_vie.h   # Déclaration des classes
 │   └── ...
-├── bin/                   # Fichier executable
 ├── assets/                # Ressources
 │   ├── examples/          # Fichiers d'état initial de la grille
 │   └── ...
