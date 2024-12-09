@@ -87,12 +87,13 @@ Le-jeu-de-la-vie/
 ├── docs/                  # Documentation (diagrammes UML, guide, etc.)
 ├── src/                   # Code source
 │   ├── main.cpp           # Point d'entrée du programme
-│   ├── jeux_de_la_vie.cpp     # Logique principale du jeu
-│   ├── grille.cpp           # Gestion de la grille et des cellules
+│   ├── jeux_de_la_vie.cpp # Logique principale du jeu
+│   ├── grille.cpp         # Gestion de la grille et des cellules
 │   └── ...                # Autres fichiers source
 ├── include/               # Fichiers d'en-tête
 │   ├── jeux_de_la_vie.h   # Déclaration des classes
 │   └── ...
+├── bin/                   # Fichier executable
 ├── assets/                # Ressources
 │   ├── examples/          # Fichiers d'état initial de la grille
 │   └── ...
