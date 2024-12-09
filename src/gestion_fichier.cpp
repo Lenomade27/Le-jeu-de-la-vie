@@ -58,4 +58,4 @@ void gestion_fichier :: create_fichier(Grille* grille_pointeur,string lien,strin
     } else {
          cout << "Erreur lors de la création du fichier : " << lien + "/" +nom+"_out"+to_string(compteur_fichier)+".txt" << endl; // Message d'erreur
     }
- )
+}
