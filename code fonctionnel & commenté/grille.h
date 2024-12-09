@@ -8,7 +8,7 @@
 #pragma once
 
 class Grille {
-public: // à revoir
+public: 
     vector<vector<Case>> grille; 
 
 public:
