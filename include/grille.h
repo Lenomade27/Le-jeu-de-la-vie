@@ -4,6 +4,8 @@
 #include <sstream>
 #include <sys/stat.h>
 #include <filesystem>
+using namespace std; 
+using namespace std::filesystem; 
 #include "case.h" 
 #pragma once
 
