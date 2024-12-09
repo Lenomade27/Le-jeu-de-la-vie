@@ -1,13 +1,13 @@
 
 # **Le Jeu de la Vie - Implémentation en C++ avec une interface graphique** 🧬
 
-## **Description du Projet**
+## **Description du Projet** 📝
 
 Le **Jeu de la Vie**, conçu par le mathématicien John Conway, est un automate cellulaire simulant l'évolution d'une population de cellules selon des règles précises. Ce projet met en œuvre une version en **C++**, exploitant les principes de la **programmation orientée objet (POO)**, avec une interface graphique basée sur la bibliothèque **SFML**.
 
 ---
 
-## **Caractéristiques Principales**
+## **Caractéristiques Principales** ⚙️
 
 - **Simulation basée sur les règles classiques :**
   - Une cellule morte possédant exactement trois voisines vivantes devient vivante.
@@ -22,14 +22,14 @@ Le **Jeu de la Vie**, conçu par le mathématicien John Conway, est un automate 
 
 ---
 
-## **Dépendances**
+## **Dépendances** ⛓️
 - **Langage :** C++ standard (C++11 ou supérieur)
 - **Bibliothèque graphique :** [SFML](https://www.sfml-dev.org/)
 - **STL C++ :** Utilisation des structures et algorithmes standards.
 
 ---
 
-## **Installation et Exécution**
+## **Installation et Exécution** 💻
 
 ### **1. Cloner le dépôt**
 ```bash
@@ -76,7 +76,7 @@ Une fois les dépendances installées, compilez le projet à l'aide du **Makefil
 
 ---
 
-## **Structure du Dépôt**
+## **Structure du Dépôt** 🌳
 
 ### **Répertoire racine**
 - `README.md` : Documentation du projet.
@@ -101,7 +101,7 @@ Le-jeu-de-la-vie/
 ```
 ---
 
-## **Diagrammes UML**
+## **Diagrammes UML** 🔲
 
 Les diagrammes suivants sont inclus dans le répertoire `docs/` :
 - **Diagramme de cas d'utilisation** : Explique les interactions utilisateur.
@@ -111,16 +111,16 @@ Les diagrammes suivants sont inclus dans le répertoire `docs/` :
 
 ---
 
-## **Licence**
+## **Licence** ✒️
 
 Ce projet est sous licence [MIT](./LICENSE).
 
 ---
 
-## **Contact**
+## **Contact** 📧
 
 Pour toute question ou suggestion, veuillez ouvrir une **issue** sur ce dépôt.
 
 ---
 
-😊 **Merci de votre intérêt pour ce projet ! Amusez-vous bien avec le Jeu de la Vie !** 🎉
+ **Merci de votre intérêt pour ce projet ! Amusez-vous bien avec le Jeu de la Vie !** 💪
