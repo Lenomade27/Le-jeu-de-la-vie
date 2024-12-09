@@ -7,7 +7,13 @@ vector<vector<int>> gestion_fichier::get_fichier_data(string lien) { // récupé
     ifstream fichier(lien); // ouvre le fichier en mode lecture
     string ligne;
     vector<vector<int>> grille; 
-    while (getline(fichier, ligne)) { // récupère ligne par ligne les données
+
+    // Ignorer la première ligne
+    if (getline(fichier, ligne)) {
+        // Première ligne sautée
+    }
+
+    while (getline(fichier, ligne)) { // récupère ligne par ligne les données restantes
         istringstream stream(ligne); // permet de gérer les espaces
         vector<int> ligneVecteur;
 
@@ -22,6 +28,7 @@ vector<vector<int>> gestion_fichier::get_fichier_data(string lien) { // récupé
     fichier.close(); // Ferme le fichier après la lecture
     return grille; // Retourne la grille de données
 }
+
 
 string gestion_fichier::create_file() {
     cout << "Veuillez choisir le chemin pour stocker l'historique : " << endl; // Demande à l'utilisateur où enregistrer le dossier 
