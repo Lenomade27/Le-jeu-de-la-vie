@@ -105,8 +105,6 @@ Et encore optimiser notre observateur pour éviter de marquer les cases plusieur
 Rajouter des extensions 
 Récupérer tous les fichiers pour le mode console et non pas que la première moitié
 
-// Voir se que rayane a modifier et ce qu'il na pas toucher
-
 
 
 
