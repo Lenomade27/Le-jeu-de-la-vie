@@ -1,4 +1,7 @@
 #include "gestion_fichier.h"
+#include <filesystem>
+using namespace std; 
+using namespace std::filesystem; 
 int gestion_fichier::compteur_fichier  = 0; // le compteur est initialisé à 0 au début de chaque boucle
 
 // note : Le fichier a déjà été testé dans la fonction main, il n'est donc pas nécessaire de refaire d'autres tests
